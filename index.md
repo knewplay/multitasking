@@ -22,11 +22,13 @@ If we want to understand multitasking, we need to know what a task is. But befor
 
 At the heart of every computer is the CPU, or Central Processing Unit. You can think of the CPU as the brain of the computer. Its job is to carry out instructions—step-by-step commands that tell the computer what to do. 
 
+These instructions are stored in the memory of the computer, and the CPU accesses those memory locations, read the instructions, and carries them out. 
+
 > **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly code instead.
 
-Imagine this: we have a CPU, and we have RAM memory. In that memory, we have stored a small program.
+Imagine this: we have a CPU, and we have RAM memory. In that memory, we have stored a small program. Fundamentally, all programs come down to these operations that the CPU can execute: store, ...
 
-These instructions are stored in the memory of the computer, and the CPU accesses those memory locations, read the instructions, and carries them out. 
+
 
 To understand how a computer processes tasks, we first need to explore how individual instructions are executed. Instructions are the basic units of work the CPU handles, whether it's adding numbers, moving data, or performing comparisons.
 Explain that a program is a set of instructions for the computer to follow.
@@ -37,6 +39,9 @@ The role of the CPU in fetching and executing instructions. (brain of the comput
 Memory is where instructions and data are stored.
 RAM (Random Access Memory), also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before reaching out to RAM.
 Memory management: Where instructions are stored (RAM vs. Cache).
+
+![Cache RAM desk analogy](./figures/desk-analogy.jpg)
+*Description*
 
 What happens in cpu is working like running a program, but then we press something on the keyboard. If watching a youtube video (is it the cpu that runs that?) and then we click on ctrl+w, which closes the window.
 
