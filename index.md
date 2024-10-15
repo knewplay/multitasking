@@ -16,38 +16,41 @@ This article introduces the concepts of multitasking and locks, fundamental to m
 
 ## Understanding Instructions: The Building Blocks of Tasks
 
-If we want to understand multitasking, we need to know what a task is. But before we get there, we need to talk about how computers execute instructions and handle resources. That's what this section is about.
+If we want to understand multitasking, we need to know what a task is. But before we learn what a task is, we need to talk about how computers execute instructions and handle resources. That's what this section is about.
 
 ### The Role of the CPU and Memory
 
-At the heart of every computer is the CPU, or Central Processing Unit. You can think of the CPU as the brain of the computer. Its job is to carry out instructions—step-by-step commands that tell the computer what to do. 
+At the heart of every computer is the CPU, or Central Processing Unit. You can think of the CPU as the brain of the computer. Its job is to carry out instructions, which are a series of commands that tell the computer what to do.
 
-These instructions are stored in the memory of the computer, and the CPU accesses those memory locations, read the instructions, and carries them out. 
+These instructions are stored in the memory of the computer, which is typically RAM (Random Access Memory). The CPU regularly accesses these memory locations, retrieves the instructions, and executes them.
 
-> **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly code instead.
+> **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly language code instead.
 
-Imagine this: we have a CPU, and we have RAM memory. In that memory, we have stored a small program. Fundamentally, all programs come down to these operations that the CPU can execute: store, ...
+Now, picture this: we have a CPU and a section of RAM. In the RAM, we have stored a small program made up of a series of instructions. All programs, no matter how complex, are broken down into a few basic operations that the CPU can execute, such as:
 
+- Store: Saving a value in memory.
+- Load: Retrieving a value from memory.
+- Add/Subtract: Performing basic arithmetic operations.
+- Jump: Moving to a different part of the program to continue execution.
+- Compare: Checking whether certain values meet a condition.
 
+> **Question: Does everything actually boil down to basic operations?**
+At a very fundamental level, yes. Every operation in a program ultimately gets compiled down to basic instructions that the CPU can understand. However, these instructions represent far more complex behaviors when combined, such as managing memory, handling network traffic, and rendering images in a video game.
 
-To understand how a computer processes tasks, we first need to explore how individual instructions are executed. Instructions are the basic units of work the CPU handles, whether it's adding numbers, moving data, or performing comparisons.
-Explain that a program is a set of instructions for the computer to follow.
-Give simple examples, like adding two numbers or printing text on the screen.
-How computers execute individual instructions.
-The role of the CPU in fetching and executing instructions. (brain of the computer, responsible for executing instructions. It performs calculations and processes data.)
-
-Memory is where instructions and data are stored.
-RAM (Random Access Memory), also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before reaching out to RAM.
-Memory management: Where instructions are stored (RAM vs. Cache).
+It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before reaching out to RAM.
 
 ![Cache RAM desk analogy](./figures/desk-analogy.jpg)
 *Description*
 
-What happens in cpu is working like running a program, but then we press something on the keyboard. If watching a youtube video (is it the cpu that runs that?) and then we click on ctrl+w, which closes the window.
+Memory management: Where instructions are stored (RAM vs. Cache).
 
 ### Title needed
 
 the CPU divides its attention across multiple tasks so quickly that it seems like they're happening simultaneously.
+
+Let’s take an everyday example: imagine you're watching a video on YouTube. The video is being processed by the CPU, which is fetching and executing instructions to play the video smoothly. But then, you press a key—maybe Ctrl + W, which closes the browser window.
+
+In this case, the CPU must pause what it's doing with the video and switch to handling your keyboard input. It fetches and executes the new instructions associated with closing the window. The CPU makes these decisions very quickly, switching between tasks in a way that appears seamless to you.
 
 ### The Role of the Operating System
 
