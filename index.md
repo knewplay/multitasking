@@ -9,12 +9,7 @@ This article introduces the concepts of multitasking and locks, fundamental to m
 
 ## Table of Contents
 
-[Computer Fundamentals: CPU, Memory, and System Basics](#computer-fundamentals-cpu-memory-and-system-basics)
-
-- [Basic Concepts of Operating Systems](#basic-concepts-of-operating-systems)
-- [Sequential vs. Concurrent Execution](#sequential-vs-concurrent-execution)
-
-## Understanding Instructions: The Building Blocks of Tasks
+## Understanding Instructions
 
 If we want to understand multitasking, we need to know what a task is. But before we learn what a task is, we need to talk about how computers execute instructions and handle resources. That's what this section is about.
 
@@ -39,9 +34,6 @@ At a very fundamental level, yes. Every operation in a program ultimately gets c
 
 It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before reaching out to RAM.
 
-![Cache RAM desk analogy](./figures/desk-analogy.jpg)
-*Description*
-
 Memory management: Where instructions are stored (RAM vs. Cache).
 
 ### Title needed
@@ -62,6 +54,14 @@ Now that we know ... [complete]
 - How the OS manages multiple tasks and allocates resources.
 - Task scheduling and prioritization.
 - Introduction to different types of scheduling algorithms (Round-Robin, Priority-based).
+
+### Why Complicate our Lives with This?
+
+Here's a valid question that may have crossed your mind: "If I am reading a blog post, or if I am watching a Youtube video, why does the operating system have to do anything in the background? Why can't it just focus on one thing, such as displaying my video, and then when I switch windows, it can focus on that? Why is there a need to do multiple things, and pretend like they are happening at once. Why not just complete one task, and then move on to the next?
+
+When the process given to CPU encounters an external interrupt or some input output stuff, what will CPU do at that time? will it just sit there and wait for the process to settle down it matters and come back for processing on its will, this is not how Central Processing Units act like. To use the CPU fully we let the programs to wait for the CPU while the CPU is done with other programs it is currently running and after a few nanoseconds hands the CPU over to some other program to fulfil the demand of maximum CPU utilizatio
+
+also keeps a track of where the user is in each of these tasks whenever the user switches between these tasks. if you have opened a browser on your computer and you also want to open word along with that and the operating system is allowing you to do so than (hurray) your operating system supports multitasking.
 
 ## Task [improve title]
 
