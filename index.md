@@ -78,10 +78,11 @@ Task Switching: Describe how the CPU switches between tasks to give the appearan
 
 - After understanding the operating system's role, students can better grasp how tasks are executed in different ways. This section can explain the difference between doing one task at a time versus handling multiple tasks, which is a key aspect of operating systems and multitasking.
 
-
 - Importance of Task Management:
 - Efficient Use of Resources: Emphasize that proper task management ensures efficient use of CPU time and prevents any single task from monopolizing the CPU.
 - Avoiding Conflicts: Discuss how task management helps avoid conflicts when tasks need to access shared resources.
+
+> **Note on Multithreading:** Unlike multitasking, where each program is a separate task taking turns on a single CPU core, multithreading divides a single program into multiple threads that can run concurrently. This is particularly effective on multi-core CPUs, where threads can truly run in parallel. It is commonly used in fields like web servers, video games, data processing, and even robotics, where parallel processing is crucial. However, the VEX V5 Brain uses multitasking instead of multithreading because of its single-core CPU architecture, which is optimized to manage multiple concurrent tasks efficiently, but without true parallelism.
 
 ## Introduction to Multitasking
 
