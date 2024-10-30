@@ -38,19 +38,15 @@ This is the Assembly language instructions that we have been talking about. And 
 > **Question: Does everything actually boil down to basic operations?**
 At a very fundamental level, yes. Every operation in a program ultimately gets compiled down to basic instructions that the CPU can understand. However, these instructions represent far more complex behaviors when combined, such as managing memory, handling network traffic, and rendering images in a video game.
 
-Now we have established what kind of operations RAM holds, and the CPU accesses them and executes them, one by one. 
-
-> **Fun Fact:** Ever noticed how CPUs are labeled with numbers like 2.6 GHz or 3.8 GHz? This represents the CPU’s clock speed, which measures the number of cycles per second. While some simple instructions can be completed in a single cycle, more complex ones may require multiple cycles. So, a 2.4 GHz CPU does not execute 2.4 billion instructions per second. Instead, it processes up to 2.4 billion cycles per second, with the actual number of instructions depending on the CPU’s architecture and efficiency.
-
-It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM.
-
-
+Now we have established what kind of operations RAM holds, and the CPU accesses them and executes them, one by one. [expand this or talk about something related] It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM.
 
 [Add illustration of desk/library analogy for better understanding cache/RAM/storage]
 
-> The way in which the computer decides what to store in the cache is beyond the scope of this article, however rest assured that there are sophisticated methods that the computer uses to decide what to store in cache based on what it predicts will be accessed most often.
+> **Fun Fact:** Ever noticed how CPUs are labeled with numbers like 2.6 GHz or 3.8 GHz? This represents the CPU’s clock speed, which measures the number of cycles per second. While some simple instructions can be completed in a single cycle, more complex ones may require multiple cycles. So, a 2.4 GHz CPU does not execute 2.4 billion instructions per second. Instead, it processes up to 2.4 billion cycles per second, with the actual number of instructions depending on the CPU’s architecture and efficiency.
 
-[Memory management: Where instructions are stored (RAM vs. Cache).]
+The way in which the computer decides what to store in the cache is beyond the scope of this article, however rest assured that there are sophisticated methods that the computer uses to decide what to store in cache based on what it predicts will be accessed most often.
+
+All you have to know is that ... [explain what they have to know to move on to the next section].
 
 ### Title needed
 
