@@ -19,9 +19,11 @@ At the heart of every computer is the CPU, or Central Processing Unit. You can t
 
 These instructions are stored in the memory of the computer, which is typically RAM (Random Access Memory). The CPU regularly accesses these memory locations, retrieves the instructions, and executes them.
 
-> **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly language code instead.
+[Illustration of cpu accessing Ram, with zoom-in on ram instructions in memory]
 
-[Add illustration of hardware (bottom) then machine language (1's and 0's), then assembly language, then high level language (google: assembly language machine language high level language)]
+> **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly language code instead. [dont have this as a note, rather have it as part of the main article]
+
+[Illustration of hardware (bottom) then machine language (1's and 0's), then assembly language, then high level language]
 
 Now, picture this: we have a CPU and a section of RAM. In the RAM, we have stored a small program made up of a series of instructions. All programs, no matter how complex, are broken down into a few basic operations that the CPU can execute, such as:
 
@@ -30,6 +32,8 @@ Now, picture this: we have a CPU and a section of RAM. In the RAM, we have store
 - Add/Subtract: Performing basic arithmetic operations.
 - Jump: Moving to a different part of the program to continue execution.
 - Compare: Checking whether certain values meet a condition.
+
+This is the Assembly language instructions that we have been talking about. And again, it is important to remmeber that in reality, RAM and all computers compoenents deal with 1's and 0's, and whenever we write in a high level langualge, or assembly language, that gets translated into binary code.
 
 > **Question: Does everything actually boil down to basic operations?**
 At a very fundamental level, yes. Every operation in a program ultimately gets compiled down to basic instructions that the CPU can understand. However, these instructions represent far more complex behaviors when combined, such as managing memory, handling network traffic, and rendering images in a video game.
