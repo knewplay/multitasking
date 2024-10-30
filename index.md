@@ -21,6 +21,8 @@ These instructions are stored in the memory of the computer, which is typically 
 
 > **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly language code instead.
 
+[Add illustration of hardware (bottom) then machine language (1's and 0's), then assembly language, then high level language (google: assembly language machine language high level language)]
+
 Now, picture this: we have a CPU and a section of RAM. In the RAM, we have stored a small program made up of a series of instructions. All programs, no matter how complex, are broken down into a few basic operations that the CPU can execute, such as:
 
 - Store: Saving a value in memory.
@@ -32,9 +34,13 @@ Now, picture this: we have a CPU and a section of RAM. In the RAM, we have store
 > **Question: Does everything actually boil down to basic operations?**
 At a very fundamental level, yes. Every operation in a program ultimately gets compiled down to basic instructions that the CPU can understand. However, these instructions represent far more complex behaviors when combined, such as managing memory, handling network traffic, and rendering images in a video game.
 
-It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before reaching out to RAM.
+It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM.
 
-Memory management: Where instructions are stored (RAM vs. Cache).
+[Add illustration of desk/library analogy for better understanding cache/RAM/storage]
+
+> The way in which the computer decides what to store in the cache is beyond the scope of this article, however rest assured that there are sophisticated methods that the computer uses to decide what to store in cache based on what it predicts will be accessed most often.
+
+[Memory management: Where instructions are stored (RAM vs. Cache).]
 
 ### Title needed
 
@@ -89,6 +95,7 @@ Task Switching: Describe how the CPU switches between tasks to give the appearan
 - Definition and Importance: Explain what multitasking is and why it's important in both everyday life and computing.
 - Everyday Analogy: Use a relatable analogy, such as a person performing multiple tasks in a day (e.g., doing homework while listening to music).
 - Computing Example: Describe how a computer uses multitasking to run several applications simultaneously, such as a web browser, music player, and chat application.
+- Illusion of parallelism(?)
 
 ### Multitasking in PROS V5
 
