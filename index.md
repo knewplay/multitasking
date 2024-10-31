@@ -38,19 +38,20 @@ This is the Assembly language instructions that we have been talking about. And 
 > **Question: Does everything actually boil down to basic operations?**
 At a very fundamental level, yes. Every operation in a program ultimately gets compiled down to basic instructions that the CPU can understand. However, these instructions represent far more complex behaviors when combined, such as managing memory, handling network traffic, and rendering images in a video game.
 
-Now we have established what kind of operations RAM holds, and the CPU accesses them and executes them, one by one. [expand this or talk about something related] It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM.
+Now we have established what kind of operations RAM holds, and the CPU accesses them and executes them, one by one. [expand this or talk about something related. Discuss how the CPU follows instructions one step at a time in a linear manner.] It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM. [expand]
 
 [Add illustration of desk/library analogy for better understanding cache/RAM/storage]
 
-> **Fun Fact:** Ever noticed how CPUs are labeled with numbers like 2.6 GHz or 3.8 GHz? This represents the CPU’s clock speed, which measures the number of cycles per second. While some simple instructions can be completed in a single cycle, more complex ones may require multiple cycles. So, a 2.4 GHz CPU does not execute 2.4 billion instructions per second. Instead, it processes up to 2.4 billion cycles per second, with the actual number of instructions depending on the CPU’s architecture and efficiency.
+> **Fun Fact:** Ever noticed how CPUs are labeled with numbers like 2.6 GHz or 3.8 GHz? This represents the CPU’s clock speed, which measures how many cycles the CPU can complete each second. While some simple instructions can be completed in a single cycle, more complex ones may require multiple cycles. So, a 2.4 GHz CPU does not execute 2.4 billion instructions per second. Instead, it processes up to 2.4 billion cycles per second, with the actual number of instructions depending on the CPU’s architecture and efficiency.
 
 The way in which the computer decides what to store in the cache is beyond the scope of this article, however rest assured that there are sophisticated methods that the computer uses to decide what to store in cache based on what it predicts will be accessed most often.
 
-All you have to know is that ... [explain what they have to know to move on to the next section].
+All you have to know is that ... [explain what they have to know to move on to the next section]. Discuss how the CPU follows instructions one step at a time in a linear manner.
 
-### Title needed
+### Title needed (Introducing Time-Sharing?)
 
-the CPU divides its attention across multiple tasks so quickly that it seems like they're happening simultaneously.
+- Explain that a CPU can only execute one instruction at a time, but it can rapidly switch between tasks.
+- The CPU divides its attention across multiple tasks so quickly that it seems like they're happening simultaneously.
 
 Let’s take an everyday example: imagine you're watching a video on YouTube. The video is being processed by the CPU, which is fetching and executing instructions to play the video smoothly. But then, you press a key—maybe Ctrl + W, which closes the browser window.
 
@@ -74,6 +75,8 @@ Here's a valid question that may have crossed your mind: "If I am reading a blog
 When the process given to CPU encounters an external interrupt or some input output stuff, what will CPU do at that time? will it just sit there and wait for the process to settle down it matters and come back for processing on its will, this is not how Central Processing Units act like. To use the CPU fully we let the programs to wait for the CPU while the CPU is done with other programs it is currently running and after a few nanoseconds hands the CPU over to some other program to fulfil the demand of maximum CPU utilizatio
 
 also keeps a track of where the user is in each of these tasks whenever the user switches between these tasks. if you have opened a browser on your computer and you also want to open word along with that and the operating system is allowing you to do so than (hurray) your operating system supports multitasking.
+
+Show illustration such as : https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/. Say program A is waiting for you to type something. Humans work in the world of second. Computer works in the world of nanoseconds(?). So while the computer waits, why not have it do other things in the background, and it will make the user believe that the computer does two things simultaneously, even though it was just waiting for one task anyway, and did the other while waiting.
 
 ## Task [improve title]
 
