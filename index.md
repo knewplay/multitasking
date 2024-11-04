@@ -23,7 +23,8 @@ These instructions are stored in the memory of the computer, which is typically 
 
 > **Note:** It is important to always keep in mind that fundamentally, everything the computers deals with are 1s and 0s, or binary. But we will not go down to that abstract of a level, we will go one level up, and deal with Assembly language code instead. [dont have this as a note, rather have it as part of the main article]
 
-[Illustration of hardware (bottom) then machine language (1's and 0's), then assembly language, then high level language]
+![Computer languages levels](./figures/languages.jpg)
+*Description*
 
 Now, picture this: we have a CPU and a section of RAM. In the RAM, we have stored a small program made up of a series of instructions. All programs, no matter how complex, are broken down into a few basic operations that the CPU can execute, such as:
 
@@ -40,7 +41,8 @@ At a very fundamental level, yes. Every operation in a program ultimately gets c
 
 Now we have established what kind of operations RAM holds, and the CPU accesses them and executes them, one by one. [expand this or talk about something related. Discuss how the CPU follows instructions one step at a time in a linear manner.] It is these operations that the RAM holds. However, there is also ... also have CPU cache is a smaller, faster memory that stores frequently accessed instructions and data for quick access. The CPU checks the cache first before accessing RAM. [expand]
 
-[Add illustration of desk/library analogy for better understanding cache/RAM/storage]
+![Library desk analogy](./figures/desk-analogy.jpg)
+*Description*
 
 > **Fun Fact:** Ever noticed how CPUs are labeled with numbers like 2.6 GHz or 3.8 GHz? This represents the CPU’s clock speed, which measures how many cycles the CPU can complete each second. While some simple instructions can be completed in a single cycle, more complex ones may require multiple cycles. So, a 2.4 GHz CPU does not execute 2.4 billion instructions per second. Instead, it processes up to 2.4 billion cycles per second, with the actual number of instructions depending on the CPU’s architecture and efficiency.
 
@@ -48,14 +50,28 @@ The way in which the computer decides what to store in the cache is beyond the s
 
 All you have to know is that ... [explain what they have to know to move on to the next section]. Discuss how the CPU follows instructions one step at a time in a linear manner.
 
-### Title needed (Introducing Time-Sharing?)
+### The Single-Core CPU Computer
 
-- Explain that a CPU can only execute one instruction at a time, but it can rapidly switch between tasks.
-- The CPU divides its attention across multiple tasks so quickly that it seems like they're happening simultaneously.
+If you go shopping for a computer today, you will certainly come across terms such as "dual core", ... . 
 
-Let’s take an everyday example: imagine you're watching a video on YouTube. The video is being processed by the CPU, which is fetching and executing instructions to play the video smoothly. But then, you press a key—maybe Ctrl + W, which closes the browser window.
+But when computers were first invented, ...
 
+So imagine a flip-phone from the 1980s where you could play a game like snake. 
+
+- Don't forget to mention "instructions" because its still under that category in the text.
+
+Start with history. At first, what kind of devices. Talk about evolution of CPU. It started with single core. then how did it evolve? could we used to be able to have two applications open at once? On the smartphone, could you text someone, and have music playing? What if texting someone, and receive a phone call. how does that work?
+
+Single CPU system could still be beneficial for certain programs because there might be times where part of your program is waiting for a network input so then can have another thread of execution and not be stuck.
+
+Interrupt could be used in single-core system? How does it work under the hood? Let’s take an everyday example: imagine you're watching a video on YouTube. The video is being processed by the CPU, which is fetching and executing instructions to play the video smoothly. But then, you press a key—maybe Ctrl + W, which closes the browser window.
 In this case, the CPU must pause what it's doing with the video and switch to handling your keyboard input. It fetches and executes the new instructions associated with closing the window. The CPU makes these decisions very quickly, switching between tasks in a way that appears seamless to you.
+
+Let me give some scenarios:
+
+- You are using Microsoft Word, and you are ready to print the file. You click on the print button, and your computer is frozen, waiting for thge computer to reach the printer (wirelessly, through wifi(?)). The computer is solely focused on that
+- You are using Microsoft Word, and Google Chrome, and Google Chrome crashes. The OS is using all of its resources to figure out what happened, and you cannot use Microsoft Word in the meantime.
+- You are playing a game on your smartphone, but receive a call. To answer the call, you must close the game. The OS must focus on one thing.
 
 ### The Role of the Operating System
 
@@ -68,17 +84,10 @@ Now that we know ... [complete]
 - Task scheduling and prioritization.
 - Introduction to different types of scheduling algorithms (Round-Robin, Priority-based).
 
-### Why Complicate our Lives with This?
+## Understanding Multitasking
 
-Here's a valid question that may have crossed your mind: "If I am reading a blog post, or if I am watching a Youtube video, why does the operating system have to do anything in the background? Why can't it just focus on one thing, such as displaying my video, and then when I switch windows, it can focus on that? Why is there a need to do multiple things, and pretend like they are happening at once. Why not just complete one task, and then move on to the next?
-
-When the process given to CPU encounters an external interrupt or some input output stuff, what will CPU do at that time? will it just sit there and wait for the process to settle down it matters and come back for processing on its will, this is not how Central Processing Units act like. To use the CPU fully we let the programs to wait for the CPU while the CPU is done with other programs it is currently running and after a few nanoseconds hands the CPU over to some other program to fulfil the demand of maximum CPU utilizatio
-
-also keeps a track of where the user is in each of these tasks whenever the user switches between these tasks. if you have opened a browser on your computer and you also want to open word along with that and the operating system is allowing you to do so than (hurray) your operating system supports multitasking.
-
-Show illustration such as : https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/. Say program A is waiting for you to type something. Humans work in the world of second. Computer works in the world of nanoseconds(?). So while the computer waits, why not have it do other things in the background, and it will make the user believe that the computer does two things simultaneously, even though it was just waiting for one task anyway, and did the other while waiting.
-
-## Task [improve title]
+- What is a Task?: Define a task in the context of computing and how it represents a specific operation or set of operations.
+- Task Scheduling: Introduce the concept of scheduling and how a computer decides which task to run at a given time. Explain the round-robin method in simple terms.
 
 ### Defining a Task
 
@@ -86,8 +95,10 @@ Definition of a task in computing.
 
 ###
 
-Relationship between tasks, processes, and threads.
 Task Switching: Describe how the CPU switches between tasks to give the appearance of doing many things simultaneously.
+
+- Explain that a CPU can only execute one instruction at a time, but it can rapidly switch between tasks.
+- The CPU divides its attention across multiple tasks so quickly that it seems like they're happening simultaneously.
 
 ### Sequential vs. Concurrent Execution
 
@@ -106,17 +117,18 @@ Task Switching: Describe how the CPU switches between tasks to give the appearan
 - Computing Example: Describe how a computer uses multitasking to run several applications simultaneously, such as a web browser, music player, and chat application.
 - Illusion of parallelism(?)
 
-### Multitasking in PROS V5
+### Why Complicate our Lives with This?
 
-- Introduce to some code
+Here's a valid question that may have crossed your mind: "If I am reading a blog post, or if I am watching a Youtube video, why does the operating system have to do anything in the background? Why can't it just focus on one thing, such as displaying my video, and then when I switch windows, it can focus on that? Why is there a need to do multiple things, and pretend like they are happening at once. Why not just complete one task, and then move on to the next?
 
-## Understanding Tasks
+When the process given to CPU encounters an external interrupt or some input output stuff, what will CPU do at that time? will it just sit there and wait for the process to settle down it matters and come back for processing on its will, this is not how Central Processing Units act like. To use the CPU fully we let the programs to wait for the CPU while the CPU is done with other programs it is currently running and after a few nanoseconds hands the CPU over to some other program to fulfil the demand of maximum CPU utilizatio
 
-- What is a Task?: Define a task in the context of computing and how it represents a specific operation or set of operations.
-- Task Scheduling: Introduce the concept of scheduling and how a computer decides which task to run at a given time. Explain the round-robin method in simple terms.
+also keeps a track of where the user is in each of these tasks whenever the user switches between these tasks. if you have opened a browser on your computer and you also want to open word along with that and the operating system is allowing you to do so than (hurray) your operating system supports multitasking.
+
+Show illustration such as : https://www.geeksforgeeks.org/difference-between-multitasking-multithreading-and-multiprocessing/. Say program A is waiting for you to type something. Humans work in the world of second. Computer works in the world of nanoseconds(?). So while the computer waits, why not have it do other things in the background, and it will make the user believe that the computer does two things simultaneously, even though it was just waiting for one task anyway, and did the other while waiting.
+
+## Multitasking in PROS V5
+
 - Example in Robotics: Describe how tasks might be used in a robot to handle different functions, like moving, sensing, and communicating.
 
-Give an example of an algorithm that would benefit from being run on multiple instances.
-Single CPU system could still be beneficial for certain programs because there might be times where part of your program is waiting for a network input so then can have another thread of execution and not be stuck.
-
-Start with history. At first, what kind of devices. Talk about evolution of CPU. It started with single core. then how did it evolve? could we used to be able to have two applications open at once? On the smartphone, could you text someone, and have music playing? What if texting someone, and receive a phone call. how does that work?
+- Introduce to some code
